@@ -1,0 +1,40 @@
+@use "sass:color";
+
+$font-size: 1vmin;
+$item-count: 6;
+
+$bar-size: 1.2em;
+$gap-size: 0.5em;
+$burger-size: calc(
+  3 * $bar-size
++ 4 * $gap-size
+);
+$bar-width: calc(
+  $burger-size
+- 2 * $gap-size
+);
+
+$item-font: calc(7 * $font-size);
+$item-padding: calc(0.25 * $item-font);
+$item-height: $item-font;
+$item-size: calc(
+  $item-height
++ $item-padding * 2
+);
+
+$menu-height: calc(
+  $burger-size
++ calc($item-size * $item-count)
+);
+$menu-border: 0.1em #fff3 outset;
+
+$body-color: #003;
+$menu-color: color.adjust(
+  $body-color, $alpha: -0.2
+);
+
+$mid-color: #030;
+$wide-color: #300;
+
+$mid-width: 600px;
+$wide-width: 1200px;

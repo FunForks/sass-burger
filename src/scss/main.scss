@@ -1,0 +1,90 @@
+@import "variables";
+
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: $body-color;
+  color: #fff;
+  font-size: $font-size;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 10vmin;
+}
+
+div.collapse {
+  position: absolute;
+  display: inline-block;
+  width: $burger-size;
+  height: $burger-size;
+  background-color: $menu-color;
+  overflow: hidden;
+  border: $menu-border;
+}
+
+div.burger {
+  width: $burger-size;
+  height: $burger-size;
+  padding-top: $gap-size;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+div.bar {
+  height: $bar-size;
+  width: $bar-width;
+  background-color: #fff6;
+  margin: $gap-size;
+  border-radius: 10em;
+}
+
+div.bar:first-child {
+  margin-top: 0;
+}
+
+div.collapse:hover div.bar {
+  background-color: #fff;
+}
+
+div.collapse ul {
+  height: 0;
+  width: auto;
+  overflow: hidden;
+}
+
+/* div.collapse, */
+div.collapse:hover {
+  width: auto;
+  height: auto;
+  height: $menu-height;
+  transition: height 200ms;
+  border-color: #fff9
+}
+
+/* div.collapse ul, */
+div.collapse:hover ul {
+  height: auto;
+}
+
+ul {
+  font-size: $item-font;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: $item-padding 1em;
+  height: $item-height;
+}
+
+li:hover {
+  background-color: #ccc;
+  color: #000;
+}
+
+@import "desktop"
